@@ -1,0 +1,35 @@
+
+Assignment #2
+Due Date: Sept 14, 2023
+
+*************************************************************************
+Remember: Assignments must be turned in electronically (via email to the TA). 
+In case of a programming assignment, you must be careful about what to turn in. 
+If some parts of the assignment are too large, e.g. the output, then you 
+must place the output in some online drive and just send the link to 
+the large output. Each assignment must have a cover page with your name, 
+assignment number, and due date. Also, please include the statements of all 
+the problems. A report which summarizes your solution and results, in the form 
+of a MS Word document or equivalent, e.g., PDF, must accompany an assignment 
+submission.
+
+Any questions? Contact Dr. Vasile Rus at vrus@memphis.edu.
+
+*************************************************************************
+
+-------------------------------------------------------------------------
+
+Problem 1 [20 points]. Write a (Perl) script that copies, line by line, a text 
+file into a destination file. The source and destination file paths are given
+as input parameters. You should handle all cases.
+
+-------------------------------------------------------------------------
+
+Problem 2 [20 points]. Write a (Perl) script (or in another programming language) 
+that counts how many words are in the main page of the course website. Also, 
+display the vocabulary of the page in alphabetical order showing for each word 
+its frequency in the page.
+
+-------------------------------------------------------------------------
+
+

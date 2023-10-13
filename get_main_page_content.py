@@ -1,8 +1,9 @@
+import os
 import requests
 from bs4 import BeautifulSoup
 
 
-def download_page_content(url):
+def download_page_content(url, folder_name="content_directory"):
     try:
         # Send a GET request to the URL and get the response object
         response = requests.get(url)
@@ -12,8 +13,14 @@ def download_page_content(url):
 
         text_content = soup.get_text()
 
-        # Write the TXT content to a file
-        with open(f"main_page_text.txt", "w", encoding="utf-8") as txt_file:
+        # Create the directory if it doesn't exist
+        if not os.path.exists(folder_name):
+            os.makedirs(folder_name)
+
+        # Write the text content to a file in the specified directory
+        with open(
+            os.path.join(folder_name, "main_page_text.txt"), "w", encoding="utf-8"
+        ) as txt_file:
             txt_file.write(text_content)
 
     except requests.exceptions.RequestException as e:
@@ -23,5 +30,5 @@ def download_page_content(url):
 # Define the URL
 url = "https://www.cs.memphis.edu/~vrus/teaching/ir-websearch/"
 
-# Call the function
-download_page_content(url)
+# Call the function and specify the folder_name where you want to save the text file
+download_page_content(url, folder_name="content_directory")
